@@ -556,3 +556,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
+
+# Viper
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)

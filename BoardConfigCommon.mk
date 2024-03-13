@@ -58,6 +58,12 @@ AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
 
 TARGET_USES_QCOM_MM_AUDIO := true
 
+ifeq ($(TARGET_USES_MIUI_DOLBY),true)
+AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := true
+else
+AUDIO_FEATURE_ENABLED_DS2_DOLBY_DAP := false
+endif
+
 # Boot control
 $(call soong_config_set, ufsbsg, ufsframework, bsg)
 
